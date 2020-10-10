@@ -1,9 +1,9 @@
-import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Home from "./components/Home";
 import Search from "./components/Search";
 import Subscribe from "./components/Subscribe";
 import CurrentLocation from "./components/CurrentLocation";
+import React, { Component } from 'react';
+import GetLoaction from './components/GetLoaction';
 import './App.css';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <GetLoaction />
         </Route>
         <Route path="/search" exact>
           <Search />
