@@ -10,7 +10,7 @@ const Search = () => {
           <input type="text" name="" required=""></input>
           <label>City</label>
         </div>
-        <a href="#">
+        <a href="/">
           <span></span>
           <span></span>
           <span></span>
