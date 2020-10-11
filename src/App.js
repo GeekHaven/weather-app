@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Search from "./components/Search";
-import Subscribe from "./components/Subscribe";
+import Subscribe from "./components/Subscribe/";
 import CurrentLocation from "./components/CurrentLocation";
-import React, { Component } from 'react';
+import React from 'react';
 import GetLoaction from './components/GetLoaction';
 import './App.css';
 
@@ -16,7 +16,7 @@ function App() {
         <Route path="/search" exact>
           <Search />
         </Route>
-        <Route path="/subscribe">
+        <Route path="/subscribe" exact component={Subscribe}>
           <Subscribe />
         </Route>
         <Route path="/current-location">
