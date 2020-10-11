@@ -44,7 +44,7 @@ class GetLoaction extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.city}</h1>
+                <h1 className="city-name">{this.state.city}</h1>
             </div>
         )
     }
