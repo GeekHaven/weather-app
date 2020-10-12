@@ -33,11 +33,11 @@ body{
 
 ul {
   justify-content: center;
-
+  display: flex;
 }
 li{
   margin-right: 15px;
-
+  user-select: none;
 }
 li>*{
   color: white;
