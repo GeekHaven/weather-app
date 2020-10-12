@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './App.css';
 import Title from "./Title";
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
           <CurrentLocation />
         </Route>
       </Switch>
+      <Footer/>
     </Router>
     </div>
   );
