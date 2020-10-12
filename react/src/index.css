@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Title {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: rgb(192, 45, 26);
+  text-align: center;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 1px 1px #5e4747, 2px 2px #312525, 3px 3px #1f1d1d;
+}
+
+.Title-Subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
