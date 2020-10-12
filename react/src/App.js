@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './App.css';
+import Title from "./Title";
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -29,32 +31,31 @@ function App() {
     },[city,url]);
 
   return (
-    <React.Fragment>
-      <div>
-      <Router>
-        <ul>
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/search">SEARCH</Link></li>
-          <li><Link to="/subscribe">SUBSCRIBE</Link></li>
-        </ul>
-      
-        <Switch>
-          <Route path="/" exact>
-            <Home data={weather} changeGlobalCity={changeGlobalCity} />
-          </Route>
-          <Route path="/search" exact>≠≠
+    <div className="App">
+      <Title />
+    <Router>
+       <ul>
+        <li><Link to="/">HOME</Link></li>
+        <li><Link to="/search">SEARCH</Link></li>
+        <li><Link to="/subscribe">SUBSCRIBE</Link></li>
+      </ul>
+      <Switch>
+        <Route path="/" exact>
+          <Home data={weather} changeGlobalCity={changeGlobalCity}/>
+        </Route>
+        <Route path="/search" exact>
           <Search />
-          </Route>
-          <Route path="/subscribe">
-            <Subscribe />
-          </Route>
-          <Route path="/current-location">
-            <CurrentLocation />
-          </Route>
-        </Switch>
-      </Router>
-      </div>
-    </React.Fragment>
+        </Route>
+        <Route path="/subscribe">
+          <Subscribe />
+        </Route>
+        <Route path="/current-location">
+          <CurrentLocation />
+        </Route>
+      </Switch>
+      <Footer/>
+    </Router>
+    </div>
   );
 }
 
