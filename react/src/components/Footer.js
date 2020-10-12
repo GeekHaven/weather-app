@@ -27,7 +27,7 @@ class Footer extends Component{
                         <ul className='list-unstyled'>
                             <li><a href='/'>HOME</a></li>
                             <li><a href='/search'>SEARCH</a></li>
-                            <li><a href='/suscribe'>SUSCRIBE</a></li>
+                            <li><a href='/subscribe'>SUBSCRIBE</a></li>
                         </ul>
                     </div>
                     <div className='col'>
