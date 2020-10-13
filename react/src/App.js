@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './App.css';
+import Title from "./Title";
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
     },[city,url]);
 
   return (
+    <div className="App">
+      <Title />
     <Router>
       <Switch>
         <Route path="/" exact>
@@ -44,7 +48,9 @@ function App() {
           <CurrentLocation />
         </Route>
       </Switch>
+      <Footer/>
     </Router>
+    </div>
   );
 }
 
