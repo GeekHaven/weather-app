@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Switch,Link} from "react-router-dom";
 import Search from "./components/Search";
-import Subscribe from "./components/Subscribe/Subscribe";
+import Subscribe from "./components/Subscribe";
 import CurrentLocation from "./components/CurrentLocation";
 import Home from "./components/Home";
 import React, { useState, useEffect } from 'react';

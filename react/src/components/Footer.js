@@ -10,7 +10,7 @@ class Footer extends Component{
         return(
         <footer className='main-footer'>
             <div className='img'>
-            <a href={repolink}><img src={gitimg} alt="image" /></a>
+            <a href={repolink}><img src={gitimg} alt="link_of_repo" /></a>
             </div>
             <hr/>
             {/* <h1>Footer</h1> */}

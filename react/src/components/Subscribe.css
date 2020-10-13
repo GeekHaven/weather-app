@@ -1,0 +1,66 @@
+.welcome {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: center;
+}
+.loginModule {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.extraBorder {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginForm {
+  color: white;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5%;
+  width: 290px;
+  height: 319px;
+  align-content: center;
+  justify-content: center;
+}
+input:focus {
+  outline: none;
+}
+.sub_name,.sub_email,.sub_btn {
+  color: white;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  width: 170px;
+  margin: 15% 0% 0% 18%;
+  font-size: 14px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: solid white 1px;
+  text-align: center;
+}
+.sub_btn {
+  margin: 25% 0% 0% 18%;
+  width: 170px;
+  background-color: #00ab5d;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.sub_btn:hover {
+  background-color: #007b43;
+}
