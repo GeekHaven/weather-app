@@ -46,7 +46,7 @@ function App() {
         <Route path="/search" exact>
           <Search />
         </Route>
-        <Route path="/subscribe">
+        <Route path="/subscribe" exact component={Subscribe}>
           <Subscribe />
         </Route>
         <Route path="/current-location">
