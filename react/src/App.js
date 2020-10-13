@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch,Link} from "react-router-dom";
 import Search from "./components/Search";
 import Subscribe from "./components/Subscribe";
 import CurrentLocation from "./components/CurrentLocation";
@@ -34,6 +34,11 @@ function App() {
     <div className="App">
       <Title />
     <Router>
+       <ul>
+        <li><Link to="/">HOME</Link></li>
+        <li><Link to="/search">SEARCH</Link></li>
+        <li><Link to="/subscribe">SUBSCRIBE</Link></li>
+      </ul>
       <Switch>
         <Route path="/" exact>
           <Home data={weather} changeGlobalCity={changeGlobalCity}/>

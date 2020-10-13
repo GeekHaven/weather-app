@@ -30,3 +30,16 @@ body{
   font-weight: 600;
   margin: 0;
 }
+
+ul {
+  justify-content: center;
+  display: flex;
+}
+li{
+  margin-right: 15px;
+  user-select: none;
+}
+li>*{
+  color: white;
+  text-decoration: none;
+}
