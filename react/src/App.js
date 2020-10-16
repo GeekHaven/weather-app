@@ -8,18 +8,19 @@ import axios from "axios";
 import './App.css';
 import Title from "./Title";
 import Footer from "./components/Footer"
+import Graph from "./components/Graph";
 
 function App() {
 
-    const [city,setCity] = useState('');
+    const [cityData,setCityData] = useState({city:'',lat:'',lon:''});
     const [weather, setWeather] = useState({});
 
-    function changeGlobalCity(currCity){
-      setCity(currCity);
+    function changeGlobalCityData(currCityData){
+      setCityData(currCityData);
     }
 
     // Url to fetch weather data from
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=77f89854c57f52abf424c8eb9b13714c`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityData.city}&units=metric&appid=77f89854c57f52abf424c8eb9b13714c`;
     
     // Fetches the data once 'city' is updated and updates weather object
     useEffect(()=>{
@@ -28,7 +29,7 @@ function App() {
         const currData = res.data;
         setWeather(currData);
       });
-    },[city,url]);
+    },[cityData,url]);
 
   return (
     <div className="App">
@@ -41,7 +42,8 @@ function App() {
       </ul>
       <Switch>
         <Route path="/" exact>
-          <Home data={weather} changeGlobalCity={changeGlobalCity}/>
+          <Home data={weather} changeGlobalCityData={changeGlobalCityData}/>
+          <Graph cityData={cityData} />
         </Route>
         <Route path="/search" exact>
           <Search />

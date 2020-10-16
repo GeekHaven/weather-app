@@ -24,8 +24,8 @@ class GetLoaction extends Component {
             ...this.state,
             city: res.data.name
           });
-          // Sets City name in App.js
-          this.props.changeGlobalCity(this.state.city);
+          // Sets City data in App.js
+          this.props.changeGlobalCityData({city: this.state.city, lat:this.state.Latitude, lon:this.state.Longitude});
         })
       }
     
@@ -33,7 +33,7 @@ class GetLoaction extends Component {
         const position = await this.getCoordinates(); 
         let latitude = position.coords.latitude;
         let longitude = position.coords.longitude;
-        // console.log(latitude, longitude)
+        console.log(position)
         this.setState(prevState => {
           return {...prevState, Latitude:latitude,Longitude:longitude}
         });
