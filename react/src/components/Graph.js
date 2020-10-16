@@ -1,10 +1,6 @@
 import React,{useState, useEffect} from "react";
 import axios from 'axios';
-<<<<<<< HEAD
-// import "./Graph.css";
-=======
 import "./Graph.css";
->>>>>>> efd5a963e618525f712dcadf8506cdbab2a0cd9a
 import GetGraph from "./GetGraph";
 const Graph = (props)=>{
 
@@ -21,7 +17,7 @@ const Graph = (props)=>{
       var date = Math.round(now.getTime()/1000)-100;
 
       for(var i=0;i<5;i++){
-            axios.get(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${props.cityData.lat}&lon=${props.cityData.lon}&dt=${date}&units=metric&appid=a136804c7dd0904689292eda3238abb6`)
+            axios.get(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${props.cityData.lat}&lon=${props.cityData.lon}&dt=${date}&units=metric&appid=77f89854c57f52abf424c8eb9b13714c`)
 
             .then(res => {
               const day = res.data.current.dt*1000;  
@@ -70,14 +66,10 @@ humidData.sort((a,b)=>{
 
   console.log(pressureData);
 
-  return <div>
-    {/* <div className="item" ><GetGraph data={tempData} type="spline" for="Temperature" suffix="°C" ytitle="Temp" /></div>
-    <div className="item" ><GetGraph data={pressureData} type="scatter" for="Pressure" suffix="Pa" ytitle="Pressure" /></div>
-    <div className="item" ><GetGraph data={humidData} type="column" for="Humidity" suffix="" ytitle="Humidity" /></div> */}
-    <GetGraph data={tempData} type="spline" for="Temperature" suffix="°C" ytitle="Temp" />
-    <GetGraph data={pressureData} type="scatter" for="Pressure" suffix="Pa" ytitle="Pressure" />
-    <GetGraph data={humidData} type="column" for="Humidity" suffix="" ytitle="Humidity" />
-
+  return <div className="column">
+    <div className="item"><GetGraph data={tempData} type="spline" for="Temperature" suffix="°C" ytitle="Temp" /></div>
+    <div className="item"><GetGraph data={pressureData} type="spline" for="Pressure" suffix="Pa" ytitle="Pressure" /></div>
+    <div className="item"><GetGraph data={humidData} type="column" for="Humidity" suffix="" ytitle="Humidity" /></div>
   </div>
 }
 

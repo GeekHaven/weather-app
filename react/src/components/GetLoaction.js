@@ -18,7 +18,7 @@ class GetLoaction extends Component {
       }
     
       setCity = () => {
-        Axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.Latitude}&lon=${this.state.Longitude}&appid=a136804c7dd0904689292eda3238abb6`)
+        Axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.Latitude}&lon=${this.state.Longitude}&appid=77f89854c57f52abf424c8eb9b13714c`)
         .then( res => {
           this.setState({
             ...this.state,

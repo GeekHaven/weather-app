@@ -1,29 +1,35 @@
 import React from "react";
-import {CanvasJS, CanvasJSChart} from "canvasjs-react-charts";
+import CanvasJSReact from '../canvasjs/canvasjs.react';
+import "./GetGraph.css";
+
+
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 
 const GetGraph = (props)=>{
     console.log(props);
     CanvasJS.addColorSet("weather",['#00adb5','#ff2e63','#ffc93c','#fc5185','#d72323']);
     const options = {
         colorSet: 'weather',
-        backgroundColor: "#222831",
+        backgroundColor: "transparent",
         animationEnabled: true,
         title:{
             fontColor: "#eeeeee",
-            fontFamily:"sans-serif",
+            fontFamily:"Montserrat",
             text: props.for
         },
         axisX: {
             titleFontColor: "#eeeeee",
+            fontFamily:"Montserrat",
             labelFontColor: '#eeeeee',
-            title:"Days",
-            
             valueFormatString: 'DD MMM',
             interval:1,
             intervalType:'day'
         },
         axisY: {
             interlacedColor: "rgba(255,250,250,0.1)",
+            fontFamily:"Montserrat",
             gridColor: "#eeeeee",
             titleFontColor: "#eeeeee",
             labelFontColor: '#eeeeee',
