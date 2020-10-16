@@ -20,7 +20,11 @@ function App() {
     }
 
     // Url to fetch weather data from
+<<<<<<< HEAD
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityData.city}&units=metric&appid=a136804c7dd0904689292eda3238abb6`;
+=======
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityData.city}&units=metric&appid=77f89854c57f52abf424c8eb9b13714c`;
+>>>>>>> efd5a963e618525f712dcadf8506cdbab2a0cd9a
     
     // Fetches the data once 'city' is updated and updates weather object
     useEffect(()=>{
