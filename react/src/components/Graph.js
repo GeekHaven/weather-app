@@ -21,11 +21,8 @@ const Graph = (props)=>{
       var date = Math.round(now.getTime()/1000)-100;
 
       for(var i=0;i<5;i++){
-<<<<<<< HEAD
             axios.get(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${props.cityData.lat}&lon=${props.cityData.lon}&dt=${date}&units=metric&appid=a136804c7dd0904689292eda3238abb6`)
-=======
-            axios.get(`https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${props.cityData.lat}&lon=${props.cityData.lon}&dt=${date}&units=metric&appid=77f89854c57f52abf424c8eb9b13714c`)
->>>>>>> efd5a963e618525f712dcadf8506cdbab2a0cd9a
+
             .then(res => {
               const day = res.data.current.dt*1000;  
                 setTempData((prev) => ( [
