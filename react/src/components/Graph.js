@@ -68,7 +68,7 @@ humidData.sort((a,b)=>{
 
   return <div className="column">
     <div className="item"><GetGraph data={tempData} type="spline" for="Temperature" suffix="°C" ytitle="Temp" /></div>
-    <div className="item"><GetGraph data={pressureData} type="spline" for="Pressure" suffix="Pa" ytitle="Pressure" /></div>
+    <div className="item"><GetGraph data={pressureData} type="scatter" for="Pressure" suffix="Pa" ytitle="Pressure" /></div>
     <div className="item"><GetGraph data={humidData} type="column" for="Humidity" suffix="" ytitle="Humidity" /></div>
   </div>
 }
