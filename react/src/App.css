@@ -1,12 +1,5 @@
-body{
-  /* background-image: url(./assets/images/weather.png);
-  background-repeat: no-repeat; 
-  background-size: cover; */
-  background-color: #303841;
-}
-
 .header{
-  margin: 10% auto 0;
+  /* margin: 10% auto 0; */
   text-align: center;
   color: #eeeeee;
   font-size: 3rem;

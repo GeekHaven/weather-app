@@ -53,7 +53,7 @@ class Search extends Component{
   }
   render(){
     return (
-    <div>
+    <div class="container">
     <div class="search-box">
       <h2>Search by City Name</h2>
       <form>
@@ -61,7 +61,7 @@ class Search extends Component{
           <input type="text" value={this.state.city} onChange={this.onChange}/>
           <label>City</label>
         </div>
-        <a onClick = {this.handleSubmit}>
+        <a onClick = {this.handleSubmit} href="/">
           <span></span>
           <span></span>
           <span></span>
@@ -73,7 +73,7 @@ class Search extends Component{
     <div class="display">
       <div id="details">
         <h1>{this.state.details.name}</h1>
-        <img src={this.state.imgurl}></img>
+        <img src={this.state.imgurl} alt="sun"></img>
         <ul>
         <li>{this.state.temp} °C</li>
         <li>{this.state.result.description}</li>

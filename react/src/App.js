@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch,Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Search from "./components/Search";
 import Subscribe from "./components/Subscribe";
 import CurrentLocation from "./components/CurrentLocation";
@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './App.css';
-import Title from "./Title";
+import Header from "./components/Header";
 import Footer from "./components/Footer"
 
 function App() {
@@ -32,18 +32,13 @@ function App() {
 
   return (
     <div className="App">
-      <Title />
+      <Header />
     <Router>
-       <ul>
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/search">SEARCH</Link></li>
-        <li><Link to="/subscribe">SUBSCRIBE</Link></li>
-      </ul>
       <Switch>
         <Route path="/" exact>
           <Home data={weather} changeGlobalCity={changeGlobalCity}/>
         </Route>
-        <Route path="/search" exact>
+        <Route path="/search" exact component={Search}>
           <Search />
         </Route>
         <Route path="/subscribe" exact component={Subscribe}>
