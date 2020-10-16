@@ -1,0 +1,17 @@
+.column{
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    flex: 1 1 auto;
+    margin: 2%;
+}
+
+@media(max-width: 1200px){
+    .column{
+        flex-direction: column;
+    }
+    .item{
+        margin: 5%;
+    }
+}
