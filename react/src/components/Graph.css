@@ -1,17 +1,17 @@
-.column{
+/* .column{
     display: flex;
-    flex-direction: row;
 }
 .item{
-    flex: 1 1 auto;
+    flex: 1 1 25%;
     margin: 2%;
-}
+    width: 25%;
+} 
 
-@media(max-width: 1200px){
+ @media(max-width: 1200px){
     .column{
         flex-direction: column;
     }
     .item{
         margin: 5%;
     }
-}
+} */

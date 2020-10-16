@@ -2,7 +2,7 @@ import React from "react";
 import {CanvasJS, CanvasJSChart} from "canvasjs-react-charts";
 
 const GetGraph = (props)=>{
-    // console.log(props.data);
+    console.log(props);
     CanvasJS.addColorSet("weather",['#00adb5','#ff2e63','#ffc93c','#fc5185','#d72323']);
     const options = {
         colorSet: 'weather',
@@ -39,7 +39,7 @@ const GetGraph = (props)=>{
             dataPoints: props.data
         }]
     }
-    return <div><CanvasJSChart class="font" options = {options} /></div>
+    return <div style={{display:"block"}}><CanvasJSChart class="font" options = {options} /></div>
 }
 
 export default GetGraph;
