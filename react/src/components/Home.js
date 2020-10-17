@@ -14,7 +14,7 @@ const container={
 const Home = (props)=>{
     return <div className="bg-image" style={container}>
         <div className="header">
-        <GetLocation changeGlobalCity={props.changeGlobalCity} />
+        <GetLocation changeGlobalCityData={props.changeGlobalCityData} />
         </div>
         <div className="weather-info">
             <Details data={props.data} />
