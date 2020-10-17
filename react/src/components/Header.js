@@ -60,6 +60,11 @@ const linkStyles = {
   color:"white",
   textDecoration:"none",
 }
+const logoStyles = {
+  color:"white",
+  textDecoration:"none",
+  padding:0,
+}
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -141,10 +146,14 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <img src={logo} className={classes.logo} alt="logo"></img>
-          <Typography className={classes.title} variant="h6" noWrap>
+        <Link style={logoStyles} href="/">
+            <MenuItem style={logoStyles}>
+              <img src={logo} className={classes.logo} alt="logo"></img>                
+              <Typography className={classes.title} variant="h6" noWrap>
             Weather App
           </Typography>
+            </MenuItem>
+            </Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
           <Link style={linkStyles} href="/">
