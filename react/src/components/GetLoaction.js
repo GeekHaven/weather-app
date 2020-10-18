@@ -16,7 +16,7 @@ class GetLoaction extends Component {
           navigator.geolocation.getCurrentPosition(resolve, reject);
         });
       }
-    
+      // 77f89854c57f52abf424c8eb9b13714c
       setCity = () => {
         Axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.Latitude}&lon=${this.state.Longitude}&appid=77f89854c57f52abf424c8eb9b13714c`)
         .then( res => {
@@ -26,6 +26,7 @@ class GetLoaction extends Component {
           });
           // Sets City data in App.js
           this.props.changeGlobalCityData({city: this.state.city, lat:this.state.Latitude, lon:this.state.Longitude});
+          // console.log(this.state.city);
         })
       }
     

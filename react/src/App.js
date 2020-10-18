@@ -9,6 +9,7 @@ import './App.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer"
 import Graph from "./components/Graph";
+import DynamicInfo from "./components/DynamicInfo";
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/current-location">
           <CurrentLocation />
         </Route>
+        <Route path="/details/:cityName" render={(props) => <DynamicInfo info={props}/>} />
       </Switch>
       <Footer/>
     </Router>
