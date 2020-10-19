@@ -171,6 +171,7 @@ body {
   /* padding-top: 270px; */
   /* width:100%; */
   /* height:300px; */
+  margin-top: 30px;
   text-align: center;
   color: white;
 }
@@ -185,4 +186,11 @@ body {
   list-style: inline;
   list-style-type: none;
   word-spacing: 120%;
+}
+
+#details .moreInfo{
+  text-align: right;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  color: #000000;
 }

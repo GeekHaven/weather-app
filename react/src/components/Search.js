@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import "./Search.css";
 
 class Search extends Component{
@@ -53,11 +54,11 @@ class Search extends Component{
   }
   render(){
     return (
-    <div class="container">
-    <div class="search-box">
+    <div className="container">
+    <div className="search-box">
       <h2>Search by City Name</h2>
       <form>
-        <div class="user-box">
+        <div className="user-box">
           <input type="text" value={this.state.city} onChange={this.onChange}/>
           <label>City</label>
         </div>
@@ -70,7 +71,7 @@ class Search extends Component{
         </a>
       </form>
     </div>
-    <div class="display">
+    <div className="display">
       <div id="details">
         <h1>{this.state.details.name}</h1>
         <img src={this.state.imgurl} alt="sun"></img>
@@ -79,6 +80,9 @@ class Search extends Component{
         <li>{this.state.result.description}</li>
         <li>humidity: {this.state.humidity}</li>
         </ul>
+        <div className="moreInfo">
+          <Link to={`/details/${this.state.details.name}`}>More Details...</Link>
+        </div>
       </div>
     </div>
     </div>
