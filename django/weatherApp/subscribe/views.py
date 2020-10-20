@@ -1,10 +1,14 @@
 from django.shortcuts import render
 
 import requests
-from django.shortcuts import render
+
 from .models import User
 
 
 def api(request):
-    name = request.POST.get('name')
-    email = request.POST.get('email')
+    if request.method=="POST":
+    name = request.POST['name']
+    email = request.POST['email']
+    print(name,email)
+    ins = User(name=name, email=email)
+    ins.save()
