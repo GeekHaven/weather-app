@@ -1,6 +1,7 @@
 import React from "react";
 import GetLocation from "./GetLoaction";
 import Details from "./Details";
+import Notifications from "./Notifications";
 
 const container={
     display:"flex",
@@ -12,7 +13,9 @@ const container={
 }
 
 const Home = (props)=>{
-    return <div className="bg-image" style={container}>
+    return(
+        <div className="bg-image" style={container}>
+        <Notifications />
         <div className="header">
         <GetLocation changeGlobalCityData={props.changeGlobalCityData} />
         </div>
@@ -20,6 +23,6 @@ const Home = (props)=>{
             <Details data={props.data} />
         </div>
     </div>
-}
+    )}
 
 export default Home;
